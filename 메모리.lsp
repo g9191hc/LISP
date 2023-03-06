@@ -1,0 +1,192 @@
+
+; 원하는 레이어의 스타일을 저장하는 리습 (레이어 + 색상 + 선 종류)
+; 10개(L1~L0)에 저장 및 변경 가능
+
+
+(defun setViewf(VN)
+	(princ (strcat "\n현재 뷰가 " VN "에 저장되었습니다."))
+	(list
+		(getVar "Viewctr") ;현재 뷰 중심점 환경변수 : Viewctr
+		(getVar "Viewsize") ;현재 뷰 크기 환경변수 : Viewsize
+	)
+)
+
+(defun c:V1(/ Vname kw)
+	(setq Vname "V1")
+	(if (= View1 nil)
+		(setq View1 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View1 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View1) (cadr View1))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V2(/ Vname kw)
+	(setq Vname "V2")
+	(if (= View2 nil)
+		(setq View2 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View2 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View2) (cadr View2))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V3(/ Vname kw)
+	(setq Vname "V3")
+	(if (= View3 nil)
+		(setq View3 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View3 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View3) (cadr View3))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V4(/ Vname kw)
+	(setq Vname "V4")
+	(if (= View4 nil)
+		(setq View4 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View4 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View4) (cadr View4))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V5(/ Vname kw)
+	(setq Vname "V5")
+	(if (= View5 nil)
+		(setq View5 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View5 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View5) (cadr View5))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V6(/ Vname kw)
+	(setq Vname "V6")
+	(if (= View6 nil)
+		(setq View6 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View6 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View6) (cadr View6))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V7(/ Vname kw)
+	(setq Vname "V7")
+	(if (= View7 nil)
+		(setq View7 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View7 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View7) (cadr View7))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V8(/ Vname kw)
+	(setq Vname "V8")
+	(if (= View8 nil)
+		(setq View8 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View8 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View8) (cadr View8))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V9(/ Vname kw)
+	(setq Vname "V9")
+	(if (= View9 nil)
+		(setq View9 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View9 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View9) (cadr View9))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
+
+(defun c:V0(/ Vname kw)
+	(setq Vname "V0")
+	(if (= View0 nil)
+		(setq View0 (setViewf Vname))
+		(progn
+			(initget "setView MoVe")(setq kw (getkword (strcat "\n[현재 뷰를 " Vname "에 저장(V) / " Vname "에 저장된 뷰로 이동(m)] <이동(m)> : ")))
+			(if (= kw "setView")
+				(setq View0 (setViewf Vname))
+				(progn
+					(command "zoom" "c" (car View0) (cadr View0))
+					(princ (strcat "\n " VName " 뷰로 이동했습니다."))
+				)
+			)
+		)
+	)
+	(princ)
+)
